@@ -1,0 +1,38 @@
+Identifying customer preferences using the Yelp dataset
+========================================================
+author: A. Rothig
+date: 23 November 2015
+
+Summary
+========================================================
+
+- Problem statement and motivation
+- Data and Methods
+- Results
+- Conclusions
+
+Problem statement and motivation
+========================================================
+
+For a given category of businesses, e.g. restaurants, and in a given city, which factors influence the yelp users' preferences?
+
+The frequencies of topics like "service", "value-for-money" etc, which are present in the reviews' texts for a restaurant, influence the (mean) number of 'useful' votes of the reviews for that restaurant. The topics, which significantly increase the number of 'useful' votes can thus be seen as indicators of yelp users' preferences.
+
+Analysing customer preferences is an important topic for companies. A restaurant owner might consider for example opening a restaurant in a new area or city and, in this situation, the customer preferences from that city are an important factor for choosing the product palette. Also, in a sociological study of the cultural differences between two states, the customer preferences can be useful. 
+
+Results I/II: Scatterplots
+========================================================
+
+The figure shows scatter plots of the mean number of useful votes versus the mean frequency of a word. Each point represents a different user. 
+
+![Scatterplots](IL_1gram.png)
+
+
+Results I/II: Regression results
+========================================================
+
+
+```{r, echo = FALSE}
+load("IL_1gram.RData")
+summary(fit1)
+```
